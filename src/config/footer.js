@@ -11,7 +11,7 @@ export const footerSocials = [
   },
   {
     name: 'Whatsapp',
-    url: '',
+    url: 'http://wa.me/393520808083',
     icon: "mdi:whatsapp",
   },
   {
