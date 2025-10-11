@@ -26,7 +26,7 @@ export const footerLists = [
 		title: 'Servizi',
 		items: [
 			{
-				title: 'termoscanzioni',
+				title: 'termografie',
 				slug: '/landing-pages/landing-1',
 			},
 			{
