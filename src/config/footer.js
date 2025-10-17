@@ -1,7 +1,7 @@
 export const footerSocials = [
   {
     name: 'Youtube',
-    url: '',
+    url: 'http://www.youtube.com/@Tamagroup_it',
     icon: "mdi:youtube",
   },
   {
