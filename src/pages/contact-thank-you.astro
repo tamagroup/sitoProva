@@ -8,6 +8,20 @@ const seo = {
 };
 ---
 
+<script>
+	// Fallback per assicurarsi che la pagina funzioni anche se il redirect non avviene
+	if (typeof window !== 'undefined') {
+		// Mostra un messaggio di conferma dopo 1 secondo
+		setTimeout(() => {
+			const content = document.querySelector('.thank-you__content');
+			if (content) {
+				content.style.opacity = '1';
+				content.style.transform = 'translateY(0)';
+			}
+		}, 100);
+	}
+</script>
+
 <Layout seo={seo}>
 	<Container>
 		<section class="thank-you__section">
@@ -47,6 +61,9 @@ const seo = {
 		padding: 2rem;
 		background-color: var(--theme-surface-1);
 		border-radius: var(--theme-shape-radius);
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.6s ease, transform 0.6s ease;
 	}
 	.thank-you__content h1 {
 		color: var(--theme-primary);
@@ -99,13 +116,44 @@ const seo = {
 		color: var(--theme-on-primary);
 	}
 	@media (max-width: 768px) {
+		.thank-you__section {
+			padding: 1rem;
+			min-height: calc(100vh - var(--navbar-height));
+		}
+		.thank-you__content {
+			padding: 1.5rem;
+			margin: 1rem 0;
+		}
+		.thank-you__content h1 {
+			font-size: clamp(1.5rem, 5vw, 2.2rem);
+		}
 		.thank-you__actions {
 			flex-direction: column;
 			align-items: center;
+			gap: 0.75rem;
 		}
 		.btn {
 			width: 100%;
-			max-width: 300px;
+			max-width: 280px;
+			padding: 0.875rem 1.25rem;
+		}
+		.contact-info {
+			margin: 1.5rem 0;
+			padding: 1rem;
+		}
+		.contact-info p {
+			font-size: 0.9rem;
+		}
+	}
+	@media (max-width: 480px) {
+		.thank-you__content {
+			padding: 1rem;
+		}
+		.thank-you__content h1 {
+			font-size: 1.6rem;
+		}
+		.contact-info p {
+			font-size: 0.85rem;
 		}
 	}
 </style>

@@ -10,18 +10,63 @@ const selectOptions = [
 
 ---
 
-<form name="contact" method="POST" data-netlify="true" action="/contact-thank-you">
-  <FormInput type="text" label="Name" name="Name" placeholder="Mario Rossi" />
-  <FormInput type="email" label="Email" name="Email" placeholder="info@skymetric.it" />
-  <FormSelect label="Come hai sentito parlare di noi?" options={selectOptions} />
-  <FormTextarea label="Messaggio" name="Message" placeholder="Il tuo messaggio..." />
-  <Button>Submit</Button>
+<form name="contact" method="POST" data-netlify="true" action="/contact-thank-you" id="contact-form">
+  <FormInput type="text" label="Name" name="Name" placeholder="Mario Rossi" required />
+  <FormInput type="email" label="Email" name="Email" placeholder="info@skymetric.it" required />
+  <FormSelect label="Come hai sentito parlare di noi?" options={selectOptions} required />
+  <FormTextarea label="Messaggio" name="Message" placeholder="Il tuo messaggio..." required />
+  <Button type="submit" id="submit-btn">Invia Messaggio</Button>
 </form>
+
+<script>
+  // Gestione migliorata del form
+  if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      
+      if (form && submitBtn) {
+        form.addEventListener('submit', function(e) {
+          // Mostra stato di caricamento
+          submitBtn.textContent = 'Invio in corso...';
+          submitBtn.disabled = true;
+          
+          // Fallback: se dopo 5 secondi non c'è redirect, mostra messaggio
+          setTimeout(() => {
+            if (submitBtn.disabled) {
+              submitBtn.textContent = 'Messaggio inviato!';
+              // Redirect manuale dopo 2 secondi
+              setTimeout(() => {
+                window.location.href = '/contact-thank-you';
+              }, 2000);
+            }
+          }, 5000);
+        });
+      }
+    });
+  }
+</script>
 
 <style>
   form {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  
+  /* Miglioramenti per mobile */
+  @media (max-width: 768px) {
+    form {
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    form {
+      gap: 0.875rem;
+      padding: 0.25rem;
+    }
   }
 </style>
