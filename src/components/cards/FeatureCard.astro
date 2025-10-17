@@ -1,5 +1,5 @@
 ---
-const {href, imgSrc, title, noShadow = false, imgWidth, imgHeight} = Astro.props;
+const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop = false } = Astro.props;
 ---
 
 <style>
@@ -19,6 +19,9 @@ const {href, imgSrc, title, noShadow = false, imgWidth, imgHeight} = Astro.props
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+  }
+  .feature-card__no-margin-top .featured-card__content {
+    padding-top: 0.25rem;
   }
   .featured-card__content picture {
     width: 100%;
@@ -41,13 +44,16 @@ const {href, imgSrc, title, noShadow = false, imgWidth, imgHeight} = Astro.props
   .feature-card__card:hover .feature-card__img {
     transform: translateY(0);
   }
+  .feature-card__no-margin-top .feature-card__img {
+    transform: translateY(0);
+  }
   .feature-card__title {
     font-family: var(--theme-font-family-sans);
   }
 </style>
 
 
-<div class="feature-card__card">
+<div class={`feature-card__card${noMarginTop ? ' feature-card__no-margin-top' : ''}`}>
   <a class="feature-card__link" href={href}>
     <div class="featured-card__content">
       <h3 class="feature-card__title">{title}</h3>
