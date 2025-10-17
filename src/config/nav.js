@@ -16,7 +16,7 @@ export const nav = [
 		slug: '/landing-pages/landing-1',
 	},
 	{
-		title: 'Concimazioni campi e servizi agricoli',
+		title: 'Agricoltura mirata',
 		slug: '/landing-pages/landing-4',
 	},
 	{
