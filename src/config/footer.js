@@ -26,19 +26,19 @@ export const footerLists = [
 		title: 'Servizi',
 		items: [
 			{
-				title: 'termografie',
+				title: 'Termografie',
 				slug: '/landing-pages/landing-1',
 			},
 			{
-				title: 'mappatura 3d',
+				title: 'Mappatura 3d',
 				slug: '/landing-pages/landing-2',
 			},
 			{
-				title: 'ispezioni aeree',
+				title: 'Ispezioni aeree',
 				slug: '/landing-pages/landing-3',
 			},
 			{
-				title: 'concimazioni campi e servizi agricoli',
+				title: 'Concimazioni campi e servizi agricoli',
 				slug: '/landing-pages/landing-4',
 			},
       // {
@@ -55,25 +55,25 @@ export const footerLists = [
 				
 			},
 			{
-				title: 'mail: info@aaaa',
+				title: 'Mail: info@aaaa',
 				
 			},
 			{
-				title: 'cellulare: 0000000000',
+				title: 'Cellulare: 0000000000',
 				
 			},
 		],
 	},
 	
 	{
-		title: 'informative',
+		title: 'Informative',
 		items: [
 			{
-				title: 'chi siamo',
+				title: 'Chi siamo',
 				slug: '/company/about',
 			},
 			{
-				title: 'note legali',
+				title: 'Note legali',
 				slug: '/company/legal',
 			},
 			{
