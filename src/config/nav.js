@@ -4,7 +4,7 @@ export const nav = [
 		slug: '/',
 	},
 	{
-		title: 'About',
+		title: 'Chi siamo',
 		slug: '/company/about',
 	},
 	
