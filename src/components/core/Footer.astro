@@ -16,6 +16,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
         <div>
           <slot name="logo" />
         </div>
+        <p class="footer-powered-by">Powered by TAMAGROUP S.R.L.</p>
         <ul class="footer-socials__list">
           {
             footerSocials.map((social) => (
@@ -77,6 +78,10 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
     padding: 0;
     display: flex;
     list-style: none;
+  }
+  .footer-powered-by {
+    margin: 0.25rem 0 0.5rem 0;
+    font-size: 0.9em; /* slightly larger for better readability */
   }
   .footer-socials__item {
     margin-right: 0.5rem;
