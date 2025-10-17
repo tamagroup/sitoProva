@@ -1,10 +1,5 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
-    url: '',
-    icon: "mdi:twitter",
-  },
-  {
     name: 'Youtube',
     url: '',
     icon: "mdi:youtube",
@@ -55,11 +50,11 @@ export const footerLists = [
 				
 			},
 			{
-				title: 'Mail: info@aaaa',
+				title: 'Mail: info@skymetric.it',
 				
 			},
 			{
-				title: 'Cellulare: 0000000000',
+				title: 'Cellulare: 3520808083',
 				
 			},
 		],
