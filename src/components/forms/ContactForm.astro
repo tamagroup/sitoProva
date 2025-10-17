@@ -10,7 +10,7 @@ const selectOptions = [
 
 ---
 
-<form name="Contact Form" method="POST" action="/contact-thank-you">
+<form name="contact" method="POST" data-netlify="true" action="/contact-thank-you">
   <FormInput type="text" label="Name" name="Name" placeholder="Mario Rossi" />
   <FormInput type="email" label="Email" name="Email" placeholder="info@skymetric.it" />
   <FormSelect label="Come hai sentito parlare di noi?" options={selectOptions} />

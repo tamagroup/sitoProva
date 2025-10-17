@@ -1,3 +1,34 @@
 [build]
   publish = "dist/"
   command = "npm run build"
+
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# Form handling configuration
+[[redirects]]
+  from = "/contact-thank-you"
+  to = "/contact-thank-you"
+  status = 200
+
+[[redirects]]
+  from = "/newsletter-thank-you"
+  to = "/newsletter-thank-you"
+  status = 200
+
+# Email notifications for forms
+[form]
+  [form.contact]
+    to = "info@skymetric.it"
+    subject = "Nuovo messaggio dal sito web"
+    from = "noreply@skymetric.it"
+    
+  [form.landing-contact]
+    to = "info@skymetric.it"
+    subject = "Nuovo messaggio dalla landing page"
+    from = "noreply@skymetric.it"
+    
+  [form.newsletter]
+    to = "info@skymetric.it"
+    subject = "Nuova iscrizione newsletter"
+    from = "noreply@skymetric.it"
