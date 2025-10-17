@@ -48,10 +48,10 @@ export const footerLists = [
 		],
 	},
 	{
-		title: 'recapiti',
+		title: 'Recapiti',
 		items: [
 			{
-				title: 'p.iva:0000000000',
+				title: 'P.iva: 04950760274',
 				
 			},
 			{
