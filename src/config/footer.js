@@ -72,7 +72,7 @@ export const footerLists = [
 				slug: '/company/legal',
 			},
 			{
-				title: 'Contact',
+				title: 'Contattaci',
 				slug: '/company/contact',
 			},
 		],
