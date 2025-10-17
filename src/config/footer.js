@@ -33,7 +33,7 @@ export const footerLists = [
 				slug: '/landing-pages/landing-3',
 			},
 			{
-				title: 'Concimazioni campi e servizi agricoli',
+				title: 'Agricoltura mirata',
 				slug: '/landing-pages/landing-4',
 			},
       // {
@@ -72,7 +72,7 @@ export const footerLists = [
 				slug: '/company/legal',
 			},
 			{
-				title: 'Contact',
+				title: 'Contattaci',
 				slug: '/company/contact',
 			},
 		],
