@@ -4,11 +4,11 @@
 	--theme-primary-hover: #006FE6;
 	--theme-on-primary: #ffffff;
 
-	--theme-bg: #F5F9FF;
-	--theme-on-bg: #0C1B2A;
+	--theme-bg: #0C1B2A;
+	--theme-on-bg: #F5F9FF;
 
-	--theme-surface-1: #E9F2FF;
-	--theme-on-surface-1: #0C1B2A;
+	--theme-surface-1: #1A2B3D;
+	--theme-on-surface-1: #E9F2FF;
 
 	--theme-surface-2: #0F3D73;
 	--theme-on-surface-2: #ffffff;
@@ -38,17 +38,17 @@
 }
 
 [data-theme='default'] {
-	color-scheme: light;
+	color-scheme: dark;
 	/* Theme Colors */
 	--theme-primary: #0A84FF;
 	--theme-primary-hover: #006FE6;
 	--theme-on-primary: #ffffff;
 
-	--theme-bg: #F5F9FF;
-	--theme-on-bg: #0C1B2A;
+	--theme-bg: #0C1B2A;
+	--theme-on-bg: #F5F9FF;
 
-	--theme-surface-1: #E9F2FF;
-	--theme-on-surface-1: #0C1B2A;
+	--theme-surface-1: #1A2B3D;
+	--theme-on-surface-1: #E9F2FF;
 
 	--theme-surface-2: #0F3D73;
 	--theme-on-surface-2: #ffffff;
