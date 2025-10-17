@@ -1,17 +1,17 @@
 :root {
 	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
-	--theme-primary-hover: hsl(0, 0%, 20%);
-	--theme-on-primary: #fff;
+	--theme-primary: #0A84FF;
+	--theme-primary-hover: #006FE6;
+	--theme-on-primary: #ffffff;
 
-	--theme-bg: #fff;
-	--theme-on-bg: #000;
+	--theme-bg: #F5F9FF;
+	--theme-on-bg: #0C1B2A;
 
-	--theme-surface-1: #f2f2f2;
-	--theme-on-surface-1: #000;
+	--theme-surface-1: #E9F2FF;
+	--theme-on-surface-1: #0C1B2A;
 
-	--theme-surface-2: #cce6d0;
-	--theme-on-surface-2: #000;
+	--theme-surface-2: #0F3D73;
+	--theme-on-surface-2: #ffffff;
 
 	/* Theme Shapes */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
@@ -40,18 +40,18 @@
 [data-theme='default'] {
 	color-scheme: light;
 	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
-	--theme-primary-hover: hsl(0, 0%, 20%);
-	--theme-on-primary: #fff;
+	--theme-primary: #0A84FF;
+	--theme-primary-hover: #006FE6;
+	--theme-on-primary: #ffffff;
 
-	--theme-bg: #fff;
-	--theme-on-bg: #000;
+	--theme-bg: #F5F9FF;
+	--theme-on-bg: #0C1B2A;
 
-	--theme-surface-1: #f2f2f2;
-	--theme-on-surface-1: #000;
+	--theme-surface-1: #E9F2FF;
+	--theme-on-surface-1: #0C1B2A;
 
-	--theme-surface-2: #cce6d0;
-	--theme-on-surface-2: #000;
+	--theme-surface-2: #0F3D73;
+	--theme-on-surface-2: #ffffff;
 
 	/* Theme Shape */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
