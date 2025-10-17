@@ -25,7 +25,7 @@ export const footerLists = [
 				slug: '/landing-pages/landing-1',
 			},
 			{
-				title: 'Mappatura 3d',
+				title: 'Mappatura 3D',
 				slug: '/landing-pages/landing-2',
 			},
 			{
