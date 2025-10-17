@@ -1,7 +1,7 @@
 export const footerSocials = [
   {
     name: 'Youtube',
-    url: '',
+    url: 'http://www.youtube.com/@Tamagroup_it',
     icon: "mdi:youtube",
   },
   {
@@ -11,7 +11,7 @@ export const footerSocials = [
   },
   {
     name: 'instagram',
-    url: '',
+    url: 'https://www.instagram.com/_skymetric_?igsh=MXh5ZWZvYnJtYTRsYQ%3D%3D&utm_source=qr',
     icon: "mdi:instagram",
   },
 ]
