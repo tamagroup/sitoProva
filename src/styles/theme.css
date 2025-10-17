@@ -5,13 +5,13 @@
 	--theme-on-primary: #ffffff;
 
 	--theme-bg: #0C1B2A;
-	--theme-on-bg: #F5F9FF;
+	--theme-on-bg: #E6EEF7; /* slightly darker than pure white look */
 
 	--theme-surface-1: #1A2B3D;
-	--theme-on-surface-1: #E9F2FF;
+	--theme-on-surface-1: #DDE9F7; /* slightly darker */
 
 	--theme-surface-2: #0F3D73;
-	--theme-on-surface-2: #ffffff;
+	--theme-on-surface-2: #F2F6FB; /* slightly darker than #fff */
 
 	/* Theme Shapes */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
@@ -45,13 +45,13 @@
 	--theme-on-primary: #ffffff;
 
 	--theme-bg: #0C1B2A;
-	--theme-on-bg: #F5F9FF;
+	--theme-on-bg: #E6EEF7; /* slightly darker */
 
 	--theme-surface-1: #1A2B3D;
-	--theme-on-surface-1: #E9F2FF;
+	--theme-on-surface-1: #DDE9F7; /* slightly darker */
 
 	--theme-surface-2: #0F3D73;
-	--theme-on-surface-2: #ffffff;
+	--theme-on-surface-2: #F2F6FB; /* slightly darker */
 
 	/* Theme Shape */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
