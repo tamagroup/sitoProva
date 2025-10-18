@@ -1,5 +1,5 @@
 ---
-const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop = false } = Astro.props;
+const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop = false, noImage = false } = Astro.props;
 ---
 
 <style>
@@ -26,6 +26,10 @@ const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop 
     justify-content: center;
     overflow-y: hidden;
     min-height: 200px;
+  }
+  .feature-card__no-image .featured-card__content {
+    min-height: 150px;
+    justify-content: center;
   }
   .feature-card__no-margin-top .featured-card__content {
     padding-top: 1.0rem;
@@ -75,6 +79,9 @@ const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop 
       padding: 0.75rem 0.75rem 1rem 0.75rem;
       min-height: 180px;
     }
+    .feature-card__no-image .featured-card__content {
+      min-height: 120px;
+    }
     .feature-card__no-margin-top .featured-card__content {
       padding-top: 0.75rem;
     }
@@ -96,6 +103,9 @@ const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop 
       padding: 0.5rem 0.5rem 0.75rem 0.5rem;
       min-height: 160px;
     }
+    .feature-card__no-image .featured-card__content {
+      min-height: 100px;
+    }
     .feature-card__no-margin-top .featured-card__content {
       padding-top: 0.5rem;
     }
@@ -113,15 +123,17 @@ const { href, imgSrc, title, noShadow = false, imgWidth, imgHeight, noMarginTop 
 </style>
 
 
-<div class={`feature-card__card${noMarginTop ? ' feature-card__no-margin-top' : ''}`}>
+<div class={`feature-card__card${noMarginTop ? ' feature-card__no-margin-top' : ''}${noImage ? ' feature-card__no-image' : ''}`}>
   <a class="feature-card__link" href={href}>
     <div class="featured-card__content">
       <h3 class="feature-card__title">{title}</h3>
-      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
-      <picture style={imgWidth && imgHeight ? `width:${imgWidth}px;height:${imgHeight}px;` : undefined}>
-        <source srcset={`${imgSrc}.webp`} type="image/webp" >
-        <img class={`feature-card__img${noShadow ? ' feature-card__img--no-shadow' : ''}`} src={`${imgSrc}.png`} alt={title} loading="lazy" width={imgWidth ?? 780} height={imgHeight ?? 585} decoding="async" style={imgWidth && imgHeight ? `width:${imgWidth}px;height:${imgHeight}px;object-fit:contain;` : undefined} >
-      </picture>
+      {!noImage && imgSrc && (
+        <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+        <picture style={imgWidth && imgHeight ? `width:${imgWidth}px;height:${imgHeight}px;` : undefined}>
+          <source srcset={`${imgSrc}.webp`} type="image/webp" >
+          <img class={`feature-card__img${noShadow ? ' feature-card__img--no-shadow' : ''}`} src={`${imgSrc}.png`} alt={title} loading="lazy" width={imgWidth ?? 780} height={imgHeight ?? 585} decoding="async" style={imgWidth && imgHeight ? `width:${imgWidth}px;height:${imgHeight}px;object-fit:contain;` : undefined} >
+        </picture>
+      )}
     </div>
   </a>
 </div> 
