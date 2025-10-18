@@ -124,6 +124,7 @@ const { navData, rightMenu } = Astro.props;
     color: inherit;
     opacity: 0.72;
     transition: opacity linear 150ms;
+    font-size: var(--font-size-base);
   }
   nav ul li a:hover {
     opacity: 1;
@@ -153,7 +154,7 @@ const { navData, rightMenu } = Astro.props;
       flex-direction: column;
     }
      header[mobile-menu-open] nav ul li {
-       font-size: var(--font-size-lg);
+       font-size: var(--font-size-xl);
        margin-bottom: 1rem;
      }
   }
