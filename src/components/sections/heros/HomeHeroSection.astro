@@ -22,51 +22,68 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 				</div>
         {settings.enableThemeSwitcher && <ThemeSwitcher client:only/>}
 		</div>
-		<div class="hero-section__image">
-				<img
-					id="home-hero-image"
-					src="/assets/images/matrice.gif"
-					onerror="this.onerror=null; this.src='/assets/images/home/classic-hero.jpg'"
-					alt="GIF droni Matrice"
-				/>
-		</div>
 	</section>
 </Container>
 
 <style>
 	.hero-section__section {
 		margin: var(--section-margin) auto;
-		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		min-height: clamp(60vh, 80vw, calc(70vh - var(--navbar-height)));
+		display: flex;
 		align-items: center;
-		gap: 1rem;
+		justify-content: center;
+		text-align: center;
+		padding: 2rem 1rem;
 	}
 	.hero-section__text {
-		justify-self: center;
-		max-width: 25rem;
+		max-width: 600px;
+		width: 100%;
+	}
+	.hero-section__text h1 {
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		margin-bottom: 1.5rem;
+		line-height: 1.1;
+	}
+	.hero-section__text p {
+		font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+		margin-bottom: 2rem;
+		line-height: 1.6;
+		opacity: 0.9;
 	}
 	.hero-btns__container {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 1rem;
-	}
-	.hero-btns__container {
-		margin-right: 1rem;
-	}
-	.hero-section__image {
-		display: flex;
-	}
-	.hero-section__image img {
-		width: 100%;
-		height: 100%;
-		max-height: 80vh;
-		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
+		margin-top: 1rem;
 	}
 	@media (max-width: 768px) {
 		.hero-section__section {
-			grid-template-columns: 1fr;
+			min-height: clamp(50vh, 70vw, calc(60vh - var(--navbar-height)));
+			padding: 1.5rem 0.5rem;
+		}
+		.hero-section__text {
+			max-width: 100%;
+		}
+		.hero-section__text h1 {
+			margin-bottom: 1rem;
+		}
+		.hero-section__text p {
+			margin-bottom: 1.5rem;
+		}
+	}
+	@media (max-width: 480px) {
+		.hero-section__section {
+			min-height: clamp(40vh, 60vw, calc(50vh - var(--navbar-height)));
+			padding: 1rem 0.25rem;
+		}
+		.hero-btns__container {
+			flex-direction: column;
+			width: 100%;
+		}
+		.hero-btns__container :global(.btn) {
+			width: 100%;
+			max-width: 280px;
 		}
 	}
 </style>
