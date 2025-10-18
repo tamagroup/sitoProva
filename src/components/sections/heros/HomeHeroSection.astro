@@ -57,6 +57,20 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 		gap: 1rem;
 		margin-top: 1rem;
 	}
+	.hero-btns__container :global(.btn) {
+		padding: 1.2rem 2.5rem;
+		font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+		font-weight: 600;
+		border-radius: 3rem;
+		text-transform: none;
+		letter-spacing: 0.5px;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+	.hero-btns__container :global(.btn):hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	}
 	@media (max-width: 768px) {
 		.hero-section__section {
 			min-height: clamp(50vh, 70vw, calc(60vh - var(--navbar-height)));
@@ -83,7 +97,9 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 		}
 		.hero-btns__container :global(.btn) {
 			width: 100%;
-			max-width: 280px;
+			max-width: 320px;
+			padding: 1rem 2rem;
+			font-size: 1.1rem;
 		}
 	}
 </style>
